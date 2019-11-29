@@ -160,9 +160,12 @@ def scrape_olr_condo_listings(soup_parse_tree, html_data):
         
 
 def scrape_olr(neighborhood_code, webdriver):
-    username = 'jrich@spiregroupny.com'
-    password = 'FrGt20'  # TODO: !!! REMOVE THIS -- SECURITY HAZARD !!!
+    username =  os.getenv('JRX_USER')
+    password = os.getenv('JRX_PASSWORD')
 
+    if not username or not password:
+        raise Exception('The environment variables JRX_USER and JRX_PASSWORD must be set.')
+    
     username_input = webdriver.find_element_by_id('ctl00_ContentPlaceHolder1_txtUserName')
     password_input = webdriver.find_element_by_id('ctl00_ContentPlaceHolder1_txtPassword')
 

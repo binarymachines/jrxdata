@@ -1,0 +1,13 @@
+
+
+Listing search types:
+
+Size (1BR, 2BR, studio)
+Neighborhood
+sq footage
+Type (condo, house, apt)
+Neighborhood
+
+Zillow, Trulia, StreetEasy, NY Times, Realtor.com, 
+
+API's, screen scraping
